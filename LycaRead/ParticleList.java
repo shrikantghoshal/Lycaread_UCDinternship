@@ -22,15 +22,12 @@ public abstract class ParticleList {
     public void readFile(String fileName) throws FileNotFoundException {
         Scanner input = new Scanner(new File(fileName));
 
-        File file = new File(fileName);
-        FileInputStream fis = new FileInputStream(file);
-        InputStreamReader isr = new InputStreamReader(fis, cs);
-        BufferedReader br = new BufferedReader(isr);
+        
         
         String line;
-        while((line = br.readLine()) != null){
+        while(input.hasNextLine()){
             // process the line
-            System.out.println(line);
+            
             micrographs.clear();
 
             line = input.nextLine();

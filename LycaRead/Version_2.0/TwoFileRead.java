@@ -15,9 +15,9 @@ class ParticleList {
         micrographs = new ArrayList<Particle>();
     }
 
-    public void particleGen(String[] partToSplit) {
+    public void particleGen(String partToSplit) {
 
-        String[] superSplit1 = partToSplit[0].split(",");
+        String[] superSplit1 = partToSplit.split(",");
 
         int tempParticleNumber;
         double tempEulerTheta, tempEulerPhi, tempEulerOmega, tempCentreX, tempCentreY, tempScalingFactor;
@@ -67,14 +67,16 @@ public class TwoFileRead {
 
                 line1 = reader1.readLine();
                 line2 = reader2.readLine();
+                line1 = reader1.readLine();
+                line2 = reader2.readLine();
 
                 part1 = line1.split(",    ");
                 part2 = line2.split(",    ");
 
             }
 
-            iteration1.particleGen(part1);
-            iteration2.particleGen(part2);
+            iteration1.particleGen(part1[0]);
+            iteration2.particleGen(part2[0]);
 
             Iterator<Particle> firstIterator = iteration1.micrographs.iterator();
             Iterator<Particle> secondIterator = iteration2.micrographs.iterator();

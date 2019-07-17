@@ -23,20 +23,22 @@ class SecondIteration extends ParticleList {
 
 public class ComparisionOutput {
 
-    public void readCompareInputs(String file1, String file2) {
+    public static void main(String[] args) {
 
         FirstIteration iteration1 = new FirstIteration();
         SecondIteration iteration2 = new SecondIteration();
 
+        iteration1.
+
         try {
-            iteration1.readFile(args[0]);
+            iteration1.readFile("/Users/shrikantghoshal/Desktop/UCD_work/P22demo/dat/P22demo_stack.date_020");
         } catch (FileNotFoundException ex) {
             System.out.println("File not found in directory");
             System.exit(0);
         }
 
         try {
-            iteration2.readFile(args[1]);
+            iteration2.readFile("/Users/shrikantghoshal/Desktop/UCD_work/P22demo/dat/P22demo_stack.date_019");
         } catch (FileNotFoundException ex) {
             System.out.println("File not found in directory");
             System.exit(0);
@@ -91,14 +93,6 @@ public class ComparisionOutput {
         // + iteration2.micrographs.get(0).getCentreX() + " - "
         // + iteration2.micrographs.get(0).getCentreY());
 
-    }
-
-    public static void main() {
-        System.out.println("Hello! Please enter the location of the first iteration you want to compare:\n");
-        Scanner userInput = new Scanner(System.in);
-
-        String[] firstFile = userInput.next();
-        
     }
 
 }
