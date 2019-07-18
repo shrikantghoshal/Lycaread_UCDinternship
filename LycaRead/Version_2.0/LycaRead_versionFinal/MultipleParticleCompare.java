@@ -70,7 +70,7 @@ public class MultipleParticleCompare {
     @Override
     public String toString() {
         return String.format(
-                "%d  ||  %.2f  -  %.2f  -  %.2f  |  %.2f  -  %.2f  -  %.2f  ||  %.2f  -  %.2f |  %.2f  -  %.2f  ||",
+                "%4d  ||  %7.2f  -  %7.2f  -  %7.2f  |  %7.2f  -  %7.2f  -  %7.2f  ||  %7.2f  -  %7.2f |  %7.2f  -  %7.2f  ||",
                 outputParticleNumber, euTheta1, euPhi1, euOmega1, euTheta2, euPhi2, euOmega2, centralX1, centralY1,
                 centralX2, centralY2);
     }

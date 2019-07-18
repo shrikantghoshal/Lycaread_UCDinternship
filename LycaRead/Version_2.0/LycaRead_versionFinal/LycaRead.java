@@ -6,51 +6,18 @@ public class LycaRead {
 
     
     public static void main(String[] args) {
-        // // Reading files using buffered reader
-        // BufferedReader reader1 = new BufferedReader(
-        // new
-        // FileReader("/Users/shrikantghoshal/Desktop/UCD_work/P22demo/dat/P22demo_stack.date_020"));
-        // BufferedReader reader2 = new BufferedReader(
-        // new
-        // FileReader("/Users/shrikantghoshal/Desktop/UCD_work/P22demo/dat/P22demo_stack.date_019"));
+
         String fileName1, fileName2;
 
         ElementSeparation newSet = new ElementSeparation();
 
         try {
-            newSet.readFileByLine("/Users/shrikantghoshal/Desktop/UCD_work/P22demo/dat/P22demo_stack.date_020", "/Users/shrikantghoshal/Desktop/UCD_work/P22demo/dat/P22demo_stack.date_019");
+            newSet.readFileByLine("/Users/shrikantghoshal/Desktop/UCD_work/P22demo/dat/P22demo_stack.date_020", "/Users/shrikantghoshal/Desktop/UCD_work/P22demo/dat/P22demo_stack.dato_020");
 
         } catch (FileNotFoundException exception) {
             System.out.println("File not found in directory");
             System.exit(0);
         }
-
-        // int lineCounter = 0;
-
-        // DefaultParticleList iteration1 = new DefaultParticleList();
-        // DefaultParticleList iteration2 = new DefaultParticleList();
-
-        // while (reader1.hasNextLine() && reader2.hasNextLine()) {
-
-        //     String[] iter1split = reader1.nextLine().split(",    ");
-        //     String[] iter2split = reader2.nextLine().split(",    ");
-
-        //     while (iter1split.length != iter2split.length || iter1split.length != 2) {
-        //         lines1.add(reader1.nextLine());
-        //         lines2.add(reader2.nextLine());
-
-        //         iter1split = reader1.nextLine().split(",    ");
-        //         iter2split = reader2.nextLine().split(",    ");
-        //     }
-
-        //     iteration1.particleGen(iter1split[0]);
-        //     iteration2.particleGen(iter2split[0]);
-        //     lineCounter++;
-
-        // }
-
-        // reader1.close();
-        // reader2.close();
 
         newSet.separateLineByParam();
 
