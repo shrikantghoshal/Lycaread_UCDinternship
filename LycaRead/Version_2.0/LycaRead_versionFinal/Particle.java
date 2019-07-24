@@ -1,5 +1,5 @@
 /**
- * A Particle - Has six descriptive parameters:
+ * A Particle - Has six descriptive parameters apart from the particle number:
  * <ul>
  *     <li>Three Euler angles: Theta, Phi, Omega
  *     <li>Two Central Angles: X and Y
