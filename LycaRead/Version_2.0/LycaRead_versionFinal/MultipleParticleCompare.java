@@ -3,7 +3,7 @@ import java.util.LinkedList;
 public class MultipleParticleCompare {
 
     private int outputParticleNumber;
-    private double euTheta1, euPhi1, euOmega1, euTheta2, euPhi2, euOmega2, centralX1, centralY1, centralX2, centralY2;
+    private double euTheta1, euPhi1, euOmega1, euTheta2, euPhi2, euOmega2, centralX1, centralY1, centralX2, centralY2, scalingFactorTwo, score1two, score2Two, score3two;
 
     public int getOutputParticleNumber() {
         return outputParticleNumber;
@@ -65,14 +65,21 @@ public class MultipleParticleCompare {
 
         centralX2 = twoParticle.getCentreX();
         centralY2 = twoParticle.getCentreY();
+
+        scalingFactorTwo = twoParticle.getScalingFactor();
+
+        score1two = twoParticle.getScoreOne();
+        score2Two = twoParticle.getScoreTwo();
+        score3two = twoParticle.getScoreThree();
+        
     }
 
     @Override
     public String toString() {
         return String.format(
-                "%4d  ||  %7.2f  -  %7.2f  -  %7.2f  |  %7.2f  -  %7.2f  -  %7.2f  ||  %7.2f  -  %7.2f |  %7.2f  -  %7.2f  ||",
-                outputParticleNumber, euTheta1, euPhi1, euOmega1, euTheta2, euPhi2, euOmega2, centralX1, centralY1,
-                centralX2, centralY2);
+                "%4d,  %6.3f,  %8.3f, %7.3f,  %6.2f, %6.2f, %5.3f, %4.3f, %4.3f, %4.3f",
+                outputParticleNumber, euTheta2, euPhi2, euOmega2,
+                centralX2, centralY2, scalingFactorTwo, score1two, score2Two, score3two);
     }
 }
 

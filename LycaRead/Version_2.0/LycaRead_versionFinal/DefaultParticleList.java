@@ -15,7 +15,7 @@ public class DefaultParticleList {
         String[] superSplit1 = partToSplit.split(",");
 
         int tempParticleNumber;
-        double tempEulerTheta, tempEulerPhi, tempEulerOmega, tempCentreX, tempCentreY, tempScalingFactor;
+        double tempEulerTheta, tempEulerPhi, tempEulerOmega, tempCentreX, tempCentreY, tempScalingFactor, tempScore1, tempScore2, tempScore3;
         tempParticleNumber = Integer.parseInt(superSplit1[0].trim());
 
         tempEulerTheta = Double.parseDouble(superSplit1[1].trim());
@@ -27,8 +27,12 @@ public class DefaultParticleList {
 
         tempScalingFactor = Double.parseDouble(superSplit1[6].trim());
 
+        tempScore1 = Double.parseDouble(superSplit1[7].trim());
+        tempScore2 = Double.parseDouble(superSplit1[8].trim());
+        tempScore3 = Double.parseDouble(superSplit1[9].trim());
+
         Particle singleParticle = new Particle(tempParticleNumber, tempEulerTheta, tempEulerPhi, tempEulerOmega,
-                tempCentreX, tempCentreY, tempScalingFactor);
+                tempCentreX, tempCentreY, tempScalingFactor, tempScore1, tempScore2, tempScore3);
 
         listOfParticles.add(singleParticle);
     }

@@ -25,7 +25,7 @@ public class LycaRead {
             newSet.readFileByLine(fileName1, fileName2);
 
         } catch (FileNotFoundException exception) {
-            System.out.println("Error in paths entered: At least one ofthe files couldn't be found\n");
+            System.out.println("XXX\nError in paths entered: At least one of the files couldn't be found... \n(._.;)\n");
             System.exit(0);
         }
 
@@ -39,7 +39,7 @@ public class LycaRead {
             // create an print writer for writing to a file
             PrintWriter out = new PrintWriter(new FileWriter("LycaReadOutput.txt"));
 
-            for (int particleCounter = 0; particleCounter <= newSet.iteration1.listOfParticles
+            for (int particleCounter = 0; particleCounter < newSet.iteration1.listOfParticles
                     .size(); particleCounter++) {
                 MultipleParticleCompare outputScript = new MultipleParticleCompare(
                         newSet.iteration1.listOfParticles.get(particleCounter),
@@ -50,6 +50,9 @@ public class LycaRead {
                 double tempCentralY1 = outputScript.getCentralY1();
                 double tempCentralX2 = outputScript.getCentralX2();
                 double tempCentralY2 = outputScript.getCentralY2();
+
+                //System.out.println(outputScript.toString());
+
 
                 if (tempCentralX1 <= tempCentralX2) {
                     Xcompare = tempCentralX1 / tempCentralX2;
@@ -69,9 +72,6 @@ public class LycaRead {
                 } else {
                     // output to the file a line
                     out.println(outputScript.toString());
-
-                    particleCounter++;
-
                 }
 
             }
